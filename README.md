@@ -4,7 +4,6 @@ Este é o meu portfólio de desenvolvedor, criado para apresentar minhas habilid
 
 ## 📌 Informações do Projeto
 
-- **URL do Projeto:** [Portfolio Gustavo Silva](https://lovable.dev/projects/1747f662-0d94-4372-85c9-5e3685869410)
 - **Deploy:** [portfolio-gustavo.lovable.app](https://portfolio-gustavo.lovable.app)
 
 ![Imagem do Portfólio](https://private-user-images.githubusercontent.com/79516858/424492348-dc44c0db-326e-41b4-a56f-ea98a3590f98.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIzOTA0OTksIm5iZiI6MTc0MjM5MDE5OSwicGF0aCI6Ii83OTUxNjg1OC80MjQ0OTIzNDgtZGM0NGMwZGItMzI2ZS00MWI0LWE1NmYtZWE5OGEzNTkwZjk4LlBORz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzE5VDEzMTYzOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI1YTJiMmQzNzg5YWVkM2JlMzM5ZmM4YTNjZTBlNmZmMmVjMWIxNzliZWI0MDgzZGIyMzVkZTgyYjA5NWQzNTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ZsMf-HbqTHWRHh3cYsEfmTWCKGCsgV_NqlPlR7uiJUU)
