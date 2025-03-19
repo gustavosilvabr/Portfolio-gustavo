@@ -22,7 +22,7 @@ const AdminLogin = () => {
     e.preventDefault();
     
     if (!username || !password) {
-      setError('Please enter both username and password');
+      setError('Por favor, digite o usuário e a senha');
       return;
     }
     
@@ -44,9 +44,9 @@ const AdminLogin = () => {
       >
         <div className="glass-card rounded-xl overflow-hidden shadow-xl">
           <div className="px-8 pt-8 pb-4 text-center">
-            <h1 className="text-2xl font-bold mb-1">Admin Login</h1>
+            <h1 className="text-2xl font-bold mb-1">Acesso Admin</h1>
             <p className="text-muted-foreground text-sm">
-              Enter your credentials to access the admin dashboard
+              Digite suas credenciais para acessar o painel administrativo
             </p>
           </div>
           
@@ -60,7 +60,7 @@ const AdminLogin = () => {
             <div className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="username" className="text-sm font-medium">
-                  Username
+                  Usuário
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
@@ -72,7 +72,7 @@ const AdminLogin = () => {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     className="pl-10"
-                    placeholder="Enter your username"
+                    placeholder="Digite seu usuário"
                     disabled={isLoading}
                   />
                 </div>
@@ -80,7 +80,7 @@ const AdminLogin = () => {
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
-                  Password
+                  Senha
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-muted-foreground">
@@ -92,7 +92,7 @@ const AdminLogin = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="pl-10"
-                    placeholder="Enter your password"
+                    placeholder="Digite sua senha"
                     disabled={isLoading}
                   />
                 </div>
@@ -106,25 +106,25 @@ const AdminLogin = () => {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Logging in...
+                    Entrando...
                   </>
                 ) : (
-                  'Login'
+                  'Entrar'
                 )}
               </Button>
             </div>
             
             <div className="mt-6 text-center text-sm text-muted-foreground">
-              <p>Demo Credentials:</p>
-              <p>Username: <span className="font-medium">admin</span></p>
-              <p>Password: <span className="font-medium">admin123</span></p>
+              <p>Credenciais de Demonstração:</p>
+              <p>Usuário: <span className="font-medium">admin</span></p>
+              <p>Senha: <span className="font-medium">admin123</span></p>
             </div>
           </form>
         </div>
         
         <div className="mt-4 text-center">
           <a href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-            Back to website
+            Voltar para o site
           </a>
         </div>
       </motion.div>

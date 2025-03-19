@@ -22,10 +22,10 @@ const AdminNavbar = () => {
   
   const navigationItems = [
     { name: 'Dashboard', path: '/admin', icon: <LayoutDashboard size={20} /> },
-    { name: 'Profile', path: '/admin/profile', icon: <User size={20} /> },
-    { name: 'Projects', path: '/admin/projects', icon: <FolderGit2 size={20} /> },
-    { name: 'Content', path: '/admin/content', icon: <FileEdit size={20} /> },
-    { name: 'Messages', path: '/admin/messages', icon: <Mail size={20} /> },
+    { name: 'Perfil', path: '/admin/profile', icon: <User size={20} /> },
+    { name: 'Projetos', path: '/admin/projects', icon: <FolderGit2 size={20} /> },
+    { name: 'Conteúdo', path: '/admin/content', icon: <FileEdit size={20} /> },
+    { name: 'Mensagens', path: '/admin/messages', icon: <Mail size={20} /> },
   ];
   
   const handleLogout = () => {
@@ -39,7 +39,7 @@ const AdminNavbar = () => {
         <div className="flex flex-col flex-1 h-full py-5 overflow-hidden">
           <div className="flex items-center h-16 flex-shrink-0 px-4 border-b border-border">
             <Link to="/admin" className="text-xl font-bold text-foreground">
-              Admin Panel
+              Painel Admin
             </Link>
           </div>
           
@@ -74,7 +74,7 @@ const AdminNavbar = () => {
                     {user.username}
                   </p>
                   <p className="text-xs text-muted-foreground truncate">
-                    Administrator
+                    Administrador
                   </p>
                 </div>
               </div>
@@ -85,12 +85,12 @@ const AdminNavbar = () => {
                 onClick={handleLogout}
               >
                 <LogOut size={16} className="mr-2" />
-                Logout
+                Sair
               </Button>
               
               <div className="mt-4">
                 <Link to="/" className="text-xs text-muted-foreground hover:text-primary transition-colors">
-                  Back to Website
+                  Voltar para o Site
                 </Link>
               </div>
             </div>
@@ -102,7 +102,7 @@ const AdminNavbar = () => {
       <div className="md:hidden bg-card border-b border-border">
         <div className="flex items-center justify-between h-16 px-4">
           <Link to="/admin" className="text-xl font-bold text-foreground">
-            Admin Panel
+            Painel Admin
           </Link>
           
           <button
@@ -147,7 +147,7 @@ const AdminNavbar = () => {
                     {user.username}
                   </p>
                   <p className="text-sm text-muted-foreground truncate">
-                    Administrator
+                    Administrador
                   </p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ const AdminNavbar = () => {
                 onClick={handleLogout}
               >
                 <LogOut size={16} className="mr-2" />
-                Logout
+                Sair
               </Button>
               
               <div className="mt-4">
@@ -167,7 +167,7 @@ const AdminNavbar = () => {
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Back to Website
+                  Voltar para o Site
                 </Link>
               </div>
             </div>
