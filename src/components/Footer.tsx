@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Gustavo Silva</h3>
             <p className="text-muted-foreground">
-              Full Stack Developer specialized in building exceptional digital experiences.
+              Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -45,7 +45,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors"
-                aria-label="Phone"
+                aria-label="Telefone"
               >
                 <Phone size={20} />
               </a>
@@ -53,33 +53,33 @@ const Footer = () => {
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Navigation</h3>
+            <h3 className="text-lg font-medium">Navegação</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
-                  Home
+                  Início
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  About
+                  Sobre
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
-                  Projects
+                  Projetos
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact
+                  Contato
                 </Link>
               </li>
             </ul>
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Technologies</h3>
+            <h3 className="text-lg font-medium">Tecnologias</h3>
             <ul className="space-y-2">
               <li className="text-muted-foreground">JavaScript / TypeScript</li>
               <li className="text-muted-foreground">React / React Native</li>
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
           
           <div className="space-y-4">
-            <h3 className="text-lg font-medium">Contact</h3>
+            <h3 className="text-lg font-medium">Contato</h3>
             <ul className="space-y-2">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={16} />
@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Gustavo Silva. All rights reserved.
+              © {currentYear} Gustavo Silva. Todos os direitos reservados.
             </p>
             <div className="mt-4 md:mt-0">
               <Link to="/admin" className="text-sm text-muted-foreground hover:text-primary transition-colors">

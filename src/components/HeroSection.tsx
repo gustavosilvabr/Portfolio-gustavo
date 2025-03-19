@@ -13,11 +13,11 @@ const HeroSection = () => {
   const [typingSpeed, setTypingSpeed] = useState(100);
   
   const phrases = [
-    'Full Stack Developer',
-    'React Specialist',
-    'Mobile App Developer',
+    'Desenvolvedor Full Stack',
+    'Especialista em React',
+    'Desenvolvedor Mobile',
     'Web Designer',
-    'Technology Enthusiast'
+    'Entusiasta de Tecnologia'
   ];
 
   useEffect(() => {
@@ -101,8 +101,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-lg max-w-2xl text-muted-foreground mb-8"
           >
-            Specialized in creating modern web and mobile applications 
-            with React, React Native, Node.js, and TypeScript.
+            Especializado na criação de aplicações web e mobile modernas 
+            com React, React Native, Node.js e TypeScript.
           </motion.p>
           
           <motion.div
@@ -113,12 +113,12 @@ const HeroSection = () => {
           >
             <Link to="/projects">
               <Button className="btn-primary min-w-[180px]">
-                View My Work
+                Ver Meus Projetos
               </Button>
             </Link>
             <Link to="/contact">
               <Button className="btn-secondary min-w-[180px]">
-                Get In Touch
+                Entre em Contato
               </Button>
             </Link>
           </motion.div>
@@ -139,7 +139,7 @@ const HeroSection = () => {
           className="cursor-pointer flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
           onClick={scrollToNextSection}
         >
-          <span className="text-sm mb-2">Scroll down</span>
+          <span className="text-sm mb-2">Rolar para baixo</span>
           <ChevronDown size={24} className="animate-bounce" />
         </ScrollLink>
       </motion.div>

@@ -103,7 +103,7 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white bg-primary/80 hover:bg-primary rounded-full p-2 transition-colors"
-              aria-label="View Repository"
+              aria-label="Ver Repositório"
             >
               <Github size={18} />
             </a>
@@ -113,7 +113,7 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white bg-primary/80 hover:bg-primary rounded-full p-2 transition-colors"
-                aria-label="Visit Project Demo"
+                aria-label="Visitar Demo do Projeto"
               >
                 <ExternalLink size={18} />
               </a>
@@ -126,7 +126,7 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
         <h3 className="font-medium text-xl mb-2 truncate">{formatName(project.name)}</h3>
         
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2 h-10">
-          {project.description || "A project by Gustavo Silva"}
+          {project.description || "Um projeto de Gustavo Silva"}
         </p>
         
         <div className="flex flex-wrap gap-2 mb-4">

@@ -11,10 +11,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Início', path: '/' },
+    { name: 'Sobre', path: '/about' },
+    { name: 'Projetos', path: '/projects' },
+    { name: 'Contato', path: '/contact' },
   ];
 
   useEffect(() => {
@@ -89,7 +89,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="GitHub Profile"
+              aria-label="Perfil do GitHub"
             >
               <Github size={20} />
             </a>
@@ -98,7 +98,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="LinkedIn Profile"
+              aria-label="Perfil do LinkedIn"
             >
               <Linkedin size={20} />
             </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="WhatsApp Contact"
+              aria-label="Contato WhatsApp"
             >
               <MessageSquare size={20} />
             </a>
@@ -115,7 +115,7 @@ const Navbar = () => {
           
           <Link to="/contact">
             <Button className="btn-primary">
-              Contact me
+              Fale comigo
             </Button>
           </Link>
         </nav>
@@ -124,7 +124,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-foreground focus:outline-none"
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -162,7 +162,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="GitHub Profile"
+              aria-label="Perfil do GitHub"
             >
               <Github size={24} />
             </a>
@@ -171,7 +171,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="LinkedIn Profile"
+              aria-label="Perfil do LinkedIn"
             >
               <Linkedin size={24} />
             </a>
@@ -180,7 +180,7 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-foreground hover:text-primary transition-colors"
-              aria-label="WhatsApp Contact"
+              aria-label="Contato WhatsApp"
             >
               <MessageSquare size={24} />
             </a>
@@ -189,7 +189,7 @@ const Navbar = () => {
           <div className="mt-8 flex justify-center">
             <Link to="/contact">
               <Button className="btn-primary">
-                Contact me
+                Fale comigo
               </Button>
             </Link>
           </div>
