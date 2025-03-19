@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">Gustavo Silva</h3>
+            <h3 className="text-xl font-bold">Gustavo Pereira da Silva</h3>
             <p className="text-muted-foreground">
               Desenvolvedor Full Stack especializado em criar experiências digitais excepcionais.
             </p>
@@ -119,7 +119,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Gustavo Silva. Todos os direitos reservados.
+              © {currentYear} Gustavo Pereira da Silva. Todos os direitos reservados.
             </p>
             <div className="mt-4 md:mt-0">
               <Link to="/admin" className="text-sm text-muted-foreground hover:text-primary transition-colors">

@@ -16,7 +16,7 @@ const HeroSection = () => {
     'Desenvolvedor Full Stack',
     'Especialista em React',
     'Desenvolvedor Mobile',
-    'Web Designer',
+    'Militar da Força Aérea',
     'Entusiasta de Tecnologia'
   ];
 
@@ -64,13 +64,6 @@ const HeroSection = () => {
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/5 z-0"></div>
       
-      {/* Animated background shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full filter blur-3xl animate-float"></div>
-        <div className="absolute top-1/3 -left-20 w-72 h-72 bg-blue-400/5 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-40 right-1/4 w-80 h-80 bg-primary/5 rounded-full filter blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
-      
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col items-center text-center">
           <motion.div
@@ -79,7 +72,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
-              Gustavo Silva
+              Gustavo Pereira da Silva
             </h1>
           </motion.div>
           
@@ -87,23 +80,33 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-12 mb-6"
+            className="h-12 mb-6 mono"
           >
-            <h2 className="text-2xl md:text-3xl text-gradient font-medium">
+            <h2 className="text-2xl md:text-3xl text-primary font-medium">
+              <span className="text-gray-400">&lt;</span> 
               {typedText}
-              <span className="inline-block w-[3px] h-7 bg-primary ml-1 animate-pulse"></span>
+              <span className="inline-block w-[3px] h-7 bg-primary ml-1 cursor-blink"></span>
+              <span className="text-gray-400"> /&gt;</span>
             </h2>
           </motion.div>
           
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg max-w-2xl text-muted-foreground mb-8"
+            className="mb-8 max-w-2xl"
           >
-            Especializado na criação de aplicações web e mobile modernas 
-            com React, React Native, Node.js e TypeScript.
-          </motion.p>
+            <div className="code-block text-left mb-6 text-sm md:text-base">
+              <p className="comment">// Desenvolvedor Full Stack</p>
+              <p><span className="keyword">const</span> <span className="function">apresentação</span> = () =&gt; {'{'}</p>
+              <p className="ml-4"><span className="keyword">return</span> {'{'}</p>
+              <p className="ml-8"><span className="tag">nome</span>: <span className="string">"Gustavo Pereira da Silva"</span>,</p>
+              <p className="ml-8"><span className="tag">especialidade</span>: <span className="string">"Aplicações web e mobile modernas"</span>,</p>
+              <p className="ml-8"><span className="tag">tecnologias</span>: [<span className="string">"React"</span>, <span className="string">"React Native"</span>, <span className="string">"Node.js"</span>, <span className="string">"TypeScript"</span>]</p>
+              <p className="ml-4">{'}'}</p>
+              <p>{'}'}</p>
+            </div>
+          </motion.div>
           
           <motion.div
             initial={{ opacity: 0 }}
@@ -139,7 +142,7 @@ const HeroSection = () => {
           className="cursor-pointer flex flex-col items-center text-muted-foreground hover:text-primary transition-colors"
           onClick={scrollToNextSection}
         >
-          <span className="text-sm mb-2">Rolar para baixo</span>
+          <span className="text-sm mono mb-2">Rolar para baixo</span>
           <ChevronDown size={24} className="animate-bounce" />
         </ScrollLink>
       </motion.div>

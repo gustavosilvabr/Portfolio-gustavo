@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Star, GitFork, ExternalLink, Github } from 'lucide-react';
+import { Star, GitFork, ExternalLink, Github, Code } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -69,31 +69,36 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
 
   // Generate image url based on name (could be replaced with actual image API)
   const getImageUrl = (name: string) => {
-    return `https://ui-avatars.com/api/?name=${name.replace(/[-_]/g, '+')}&background=0D8ABC&color=fff&size=250`;
+    const encodedName = encodeURIComponent(name.replace(/[-_]/g, '+'));
+    return `https://raw.githubusercontent.com/gustavosilvabr/${name}/main/screenshot.png, https://ui-avatars.com/api/?name=${encodedName}&background=0D8ABC&color=fff&size=250`;
+  };
+
+  // Determinar a cor de fundo do cartão com base na linguagem do projeto
+  const getCardBackground = () => {
+    const language = project.language || 'JavaScript';
+    const baseClasses = 'group glass-card rounded-xl overflow-hidden transition-all duration-700 transform border border-zinc-800/20 dark:border-zinc-100/10';
+    
+    if (isVisible) {
+      return `${baseClasses} opacity-100 translate-y-0`;
+    } else {
+      return `${baseClasses} opacity-0 translate-y-10`;
+    }
   };
 
   return (
-    <div 
-      className={cn(
-        'group glass-card rounded-xl overflow-hidden transition-all duration-700 transform',
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      )}
-    >
-      <div className="relative aspect-video overflow-hidden">
+    <div className={getCardBackground()}>
+      <div className="relative aspect-video overflow-hidden bg-zinc-900/20">
         {!imageLoaded && (
           <div className="absolute inset-0 bg-card animate-pulse flex items-center justify-center">
-            <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <Code size={32} className="text-primary/40" />
           </div>
         )}
-        <img
-          src={getImageUrl(project.name)}
-          alt={project.name}
-          className={cn(
-            'w-full h-full object-cover transition-transform duration-500 group-hover:scale-105',
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          )}
-          onLoad={() => setImageLoaded(true)}
-        />
+        <div className={cn(
+          'w-full h-full flex items-center justify-center',
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        )}>
+          <Code size={48} className="text-primary/40" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
         <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -123,7 +128,7 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
       </div>
       
       <div className="p-5">
-        <h3 className="font-medium text-xl mb-2 truncate">{formatName(project.name)}</h3>
+        <h3 className="font-medium text-xl mb-2 truncate mono">{formatName(project.name)}</h3>
         
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2 h-10">
           {project.description || "Um projeto de Gustavo Silva"}
@@ -133,13 +138,13 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
           {project.topics.slice(0, 3).map((topic, index) => (
             <span 
               key={index} 
-              className="inline-block bg-secondary text-xs px-2 py-1 rounded-full"
+              className="inline-block bg-secondary/50 border border-zinc-800/10 text-xs px-2 py-1 rounded-full mono"
             >
               {topic}
             </span>
           ))}
           {project.topics.length > 3 && (
-            <span className="inline-block bg-secondary text-xs px-2 py-1 rounded-full">
+            <span className="inline-block bg-secondary/50 border border-zinc-800/10 text-xs px-2 py-1 rounded-full mono">
               +{project.topics.length - 3}
             </span>
           )}
@@ -165,7 +170,7 @@ const ProjectCard = ({ project, delay = 0 }: ProjectCardProps) => {
                   languageColors[project.language] || "bg-gray-500"
                 )}
               ></span>
-              <span className="text-muted-foreground">{project.language}</span>
+              <span className="text-muted-foreground mono">{project.language}</span>
             </div>
           )}
         </div>

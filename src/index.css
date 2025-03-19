@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,35 +8,35 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 210 40% 10%;
+    --background: 240 10% 98%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 210 40% 96%;
-    --card-foreground: 210 40% 3%;
+    --card: 240 10% 96%;
+    --card-foreground: 240 10% 3%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 40% 4%;
+    --popover-foreground: 240 10% 4%;
 
-    --primary: 210 100% 50%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 90%;
-    --secondary-foreground: 210 40% 10%;
+    --secondary: 240 10% 90%;
+    --secondary-foreground: 240 10% 10%;
 
-    --muted: 210 40% 90%;
-    --muted-foreground: 215 20% 45%;
+    --muted: 240 10% 90%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 210 40% 90%;
-    --accent-foreground: 210 40% 10%;
+    --accent: 240 10% 90%;
+    --accent-foreground: 240 10% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 40% 90%;
-    --input: 210 40% 90%;
-    --ring: 210 100% 50%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 221 83% 53%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -48,33 +49,33 @@
   }
 
   .dark {
-    --background: 210 40% 3%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 210 40% 6%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 210 40% 3%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 50%;
+    --primary: 221 83% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 20%;
+    --secondary: 240 5% 10%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 10%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 240 5% 10%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 210 40% 10%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 240 5% 10%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 40% 15%;
-    --input: 210 40% 15%;
-    --ring: 210 100% 60%;
+    --border: 240 5% 10%;
+    --input: 240 5% 10%;
+    --ring: 221 83% 60%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -104,11 +105,15 @@
   p, ul, ol {
     @apply font-sans;
   }
+  
+  .mono {
+    font-family: 'Fira Code', monospace;
+  }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 dark:bg-black/20 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-lg;
+    @apply bg-white/60 dark:bg-black/20 backdrop-blur-lg border border-white/20 dark:border-white/5 shadow-sm;
   }
   
   .container-content {
@@ -120,15 +125,39 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white rounded-full px-6 py-3 font-medium transition-all hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98];
+    @apply bg-primary text-white rounded-md px-5 py-2 font-medium mono transition-all hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground rounded-full px-6 py-3 font-medium transition-all hover:bg-secondary/80 active:scale-[0.98];
+    @apply bg-secondary text-secondary-foreground rounded-md px-5 py-2 font-medium mono transition-all hover:bg-secondary/80 active:scale-[0.98];
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500;
+  }
+  
+  .code-block {
+    @apply bg-zinc-900 text-zinc-100 font-mono rounded-md p-4 overflow-x-auto;
+  }
+  
+  .tag {
+    @apply text-blue-500 dark:text-blue-400;
+  }
+  
+  .comment {
+    @apply text-zinc-500 dark:text-zinc-400;
+  }
+  
+  .function {
+    @apply text-yellow-500 dark:text-yellow-400;
+  }
+  
+  .string {
+    @apply text-green-500 dark:text-green-400;
+  }
+  
+  .keyword {
+    @apply text-purple-500 dark:text-purple-400;
   }
 }
 
@@ -174,7 +203,7 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -183,9 +212,108 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--muted-foreground));
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Code syntax highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #636f88;
+}
+
+.token.punctuation {
+  color: #81a1c1;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #81a1c1;
+}
+
+.token.number {
+  color: #b48ead;
+}
+
+.token.boolean {
+  color: #81a1c1;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a3be8c;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #81a1c1;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #88c0d0;
+}
+
+.token.keyword {
+  color: #81a1c1;
+}
+
+.token.regex,
+.token.important {
+  color: #ebcb8b;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
 }

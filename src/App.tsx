@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { useEffect } from "react";
-import { motion } from "framer-motion";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 // Main Pages
 import HomePage from "./pages/Index";
@@ -22,23 +22,13 @@ import AdminDashboard from "./pages/admin/Dashboard";
 // 404 Page
 import NotFound from "./pages/NotFound";
 
-// Initialize framer-motion for page transitions
-const pageVariants = {
-  initial: {
-    opacity: 0,
-  },
-  in: {
-    opacity: 1,
-  },
-  out: {
-    opacity: 0,
-  },
-};
+// ScrollToTop component to handle scrolling to top on route change
+const ScrollToTop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.5,
+  return null;
 };
 
 const queryClient = new QueryClient({
@@ -50,15 +40,6 @@ const queryClient = new QueryClient({
   },
 });
 
-// ScrollToTop component to handle scrolling to top on route change
-const ScrollToTop = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return null;
-};
-
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -68,6 +49,7 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <AuthProvider>
+            <WhatsAppButton />
             <Routes>
               {/* Main Routes */}
               <Route path="/" element={<HomePage />} />

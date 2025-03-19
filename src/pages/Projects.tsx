@@ -8,7 +8,7 @@ import ProjectCard from '@/components/ProjectCard';
 import { fetchStarredRepositories, fetchUserRepositories, GithubRepository } from '@/utils/github';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Loader2 } from 'lucide-react';
+import { Loader2, Code, GitBranch, GitPullRequest, Database } from 'lucide-react';
 
 const ProjectsPage = () => {
   const [activeTab, setActiveTab] = useState('starred');
@@ -71,14 +71,14 @@ const ProjectsPage = () => {
           <div className="container-content">
             <ScrollReveal>
               <div className="text-center">
-                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 mono">
                   Portfolio
                 </span>
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  My Projects
+                  Meus Projetos
                 </h1>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  A showcase of my work, personal projects, and contributions
+                  Uma amostra dos meus trabalhos, projetos pessoais e contribuições
                 </p>
               </div>
             </ScrollReveal>
@@ -97,8 +97,8 @@ const ProjectsPage = () => {
               >
                 <div className="flex justify-center mb-8">
                   <TabsList className="glass-card">
-                    <TabsTrigger value="starred">Starred Projects</TabsTrigger>
-                    <TabsTrigger value="all">All Projects</TabsTrigger>
+                    <TabsTrigger value="starred" className="mono">Projetos Favoritos</TabsTrigger>
+                    <TabsTrigger value="all" className="mono">Todos os Projetos</TabsTrigger>
                   </TabsList>
                 </div>
                 
@@ -110,9 +110,9 @@ const ProjectsPage = () => {
                       variant={currentFilter === language ? "default" : "outline"}
                       size="sm"
                       onClick={() => setCurrentFilter(language)}
-                      className="rounded-full"
+                      className={`rounded-md mono text-xs ${currentFilter === language ? '' : 'border-zinc-200 dark:border-zinc-800'}`}
                     >
-                      {language === 'all' ? 'All' : language}
+                      {language === 'all' ? 'Todos' : language}
                     </Button>
                   ))}
                 </div>
@@ -132,8 +132,8 @@ const ProjectsPage = () => {
                     </div>
                   ) : (
                     <div className="text-center py-10">
-                      <p className="text-muted-foreground">
-                        No projects found with the selected filter.
+                      <p className="text-muted-foreground mono">
+                        Nenhum projeto encontrado com o filtro selecionado.
                       </p>
                     </div>
                   )}
@@ -154,8 +154,8 @@ const ProjectsPage = () => {
                     </div>
                   ) : (
                     <div className="text-center py-10">
-                      <p className="text-muted-foreground">
-                        No projects found with the selected filter.
+                      <p className="text-muted-foreground mono">
+                        Nenhum projeto encontrado com o filtro selecionado.
                       </p>
                     </div>
                   )}
@@ -171,100 +171,96 @@ const ProjectsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <ScrollReveal direction="left">
                 <div className="glass-card rounded-xl p-8">
-                  <h3 className="text-2xl font-bold mb-4">Project Workflow</h3>
+                  <h3 className="text-2xl font-bold mb-4">Fluxo de Trabalho</h3>
                   <p className="text-muted-foreground mb-6">
-                    My approach to building high-quality projects involves a structured methodology:
+                    Minha abordagem para construir projetos de alta qualidade envolve uma metodologia estruturada:
                   </p>
-                  <ul className="space-y-4">
-                    <li className="flex gap-4">
-                      <div className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                        1
+                  <div className="space-y-4">
+                    <div className="flex gap-4 items-start">
+                      <div className="bg-primary/10 text-primary rounded-md w-8 h-8 flex items-center justify-center flex-shrink-0 mono">
+                        01
                       </div>
                       <div>
-                        <h4 className="font-medium">Research & Planning</h4>
+                        <h4 className="font-medium mono">Pesquisa & Planejamento</h4>
                         <p className="text-sm text-muted-foreground">
-                          Understanding project requirements and planning the architecture
+                          Compreender os requisitos do projeto e planejar a arquitetura
                         </p>
                       </div>
-                    </li>
-                    <li className="flex gap-4">
-                      <div className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                        2
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="bg-primary/10 text-primary rounded-md w-8 h-8 flex items-center justify-center flex-shrink-0 mono">
+                        02
                       </div>
                       <div>
-                        <h4 className="font-medium">Design & Prototyping</h4>
+                        <h4 className="font-medium mono">Design & Prototipagem</h4>
                         <p className="text-sm text-muted-foreground">
-                          Creating wireframes and visual designs for the user interface
+                          Criação de wireframes e designs visuais para a interface
                         </p>
                       </div>
-                    </li>
-                    <li className="flex gap-4">
-                      <div className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                        3
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="bg-primary/10 text-primary rounded-md w-8 h-8 flex items-center justify-center flex-shrink-0 mono">
+                        03
                       </div>
                       <div>
-                        <h4 className="font-medium">Development</h4>
+                        <h4 className="font-medium mono">Desenvolvimento</h4>
                         <p className="text-sm text-muted-foreground">
-                          Writing clean, efficient, and maintainable code
+                          Escrita de código limpo, eficiente e de fácil manutenção
                         </p>
                       </div>
-                    </li>
-                    <li className="flex gap-4">
-                      <div className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                        4
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="bg-primary/10 text-primary rounded-md w-8 h-8 flex items-center justify-center flex-shrink-0 mono">
+                        04
                       </div>
                       <div>
-                        <h4 className="font-medium">Testing & Optimization</h4>
+                        <h4 className="font-medium mono">Testes & Otimização</h4>
                         <p className="text-sm text-muted-foreground">
-                          Ensuring quality and performance through rigorous testing
+                          Garantia de qualidade e desempenho através de testes rigorosos
                         </p>
                       </div>
-                    </li>
-                    <li className="flex gap-4">
-                      <div className="bg-primary/10 text-primary rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                        5
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="bg-primary/10 text-primary rounded-md w-8 h-8 flex items-center justify-center flex-shrink-0 mono">
+                        05
                       </div>
                       <div>
-                        <h4 className="font-medium">Deployment & Maintenance</h4>
+                        <h4 className="font-medium mono">Implantação & Manutenção</h4>
                         <p className="text-sm text-muted-foreground">
-                          Deploying applications and providing ongoing support
+                          Implantação de aplicações e suporte contínuo
                         </p>
                       </div>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
               </ScrollReveal>
               
               <ScrollReveal direction="right">
                 <div className="glass-card rounded-xl p-8">
-                  <h3 className="text-2xl font-bold mb-4">Looking to Collaborate?</h3>
+                  <h3 className="text-2xl font-bold mb-4">Vamos Colaborar?</h3>
                   <p className="text-muted-foreground mb-6">
-                    I'm always interested in new projects and collaborations. Whether you need a:
+                    Estou sempre interessado em novos projetos e colaborações. Precisa de:
                   </p>
                   <ul className="space-y-4 mb-8">
-                    <li className="flex gap-4">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p>Responsive web application</p>
+                    <li className="flex gap-3 items-start">
+                      <Code size={18} className="text-primary mt-0.5" />
+                      <p>Aplicação web responsiva</p>
                     </li>
-                    <li className="flex gap-4">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p>Mobile app for Android and iOS</p>
+                    <li className="flex gap-3 items-start">
+                      <GitBranch size={18} className="text-primary mt-0.5" />
+                      <p>Aplicativo mobile para Android e iOS</p>
                     </li>
-                    <li className="flex gap-4">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p>Backend API development</p>
+                    <li className="flex gap-3 items-start">
+                      <GitPullRequest size={18} className="text-primary mt-0.5" />
+                      <p>Desenvolvimento de API backend</p>
                     </li>
-                    <li className="flex gap-4">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p>E-commerce solution</p>
-                    </li>
-                    <li className="flex gap-4">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                      <p>Custom business application</p>
+                    <li className="flex gap-3 items-start">
+                      <Database size={18} className="text-primary mt-0.5" />
+                      <p>Solução de aplicação personalizada</p>
                     </li>
                   </ul>
                   <Button className="btn-primary">
-                    Contact Me for Collaboration
+                    Entre em Contato
                   </Button>
                 </div>
               </ScrollReveal>
