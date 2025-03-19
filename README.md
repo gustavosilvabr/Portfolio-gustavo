@@ -1,69 +1,29 @@
-# Welcome to your Lovable project
+# 🌐 Meu Portfólio
 
-## Project info
+Este é o meu portfólio de desenvolvedor, criado para apresentar minhas habilidades, projetos e experiências.
 
-**URL**: https://lovable.dev/projects/1747f662-0d94-4372-85c9-5e3685869410
+## 📌 Informações do Projeto
 
-## How can I edit this code?
+- **URL do Projeto:** [Portfolio Gustavo Silva](https://lovable.dev/projects/1747f662-0d94-4372-85c9-5e3685869410)
+- **Deploy:** [portfolio-gustavo.lovable.app](https://portfolio-gustavo.lovable.app)
 
-There are several ways of editing your application.
+![Imagem do Portfólio](Capturar.PNG)
 
-**Use Lovable**
+## 🚀 Tecnologias Utilizadas
 
-Simply visit the [Lovable Project](https://portfolio-gustavo.lovable.app/) and start prompting.
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Changes made via Lovable will be committed automatically to this repo.
+- ⚡ **[Vite](https://vitejs.dev/)** – Ferramenta de build rápida para projetos frontend modernos.
+- ⌨ **[TypeScript](https://www.typescriptlang.org/)** – Superset do JavaScript que adiciona tipagem estática.
+- ⚛ **[React](https://react.dev/)** – Biblioteca para construção de interfaces dinâmicas e reativas.
+- 🎨 **[shadcn/ui](https://ui.shadcn.com/)** – Componentes acessíveis e estilizados para React.
+- 💨 **[Tailwind CSS](https://tailwindcss.com/)** – Framework de estilização baseada em utilitários.
 
-**Use your preferred IDE**
+## 📩 Contato
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Caso queira saber mais sobre o projeto ou entrar em contato comigo:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1747f662-0d94-4372-85c9-5e3685869410) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+- 🔗 **LinkedIn:** [linkedin.com/in/gustavo-silva69](https://linkedin.com/in/gustavo-silva69)
+- 🐙 **GitHub:** [github.com/gustavosilvabr](https://github.com/gustavosilvabr)
+- 📧 **Email:** [pereirasilvagustavo1212@gmail.com](mailto:pereirasilvagustavo1212@gmail.com)
+- 📱 **WhatsApp:** [+55 61 99516-7585](https://wa.me/5561995167585)
